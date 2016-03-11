@@ -1,0 +1,25 @@
+{
+  "id": "cscw-bplus-04",
+  "description": "Example Gateway",
+  "dnssdEnabled": false,
+  "publicAddr": "localhost",
+  "staticDir": "./static",
+  "catalog": [
+    {
+      "discover": true
+    }
+  ],
+  "http": {
+    "bindAddr": "0.0.0.0",
+    "bindPort": 8080
+  },
+  "protocols": {
+    "REST": {
+      "location": "/rest"
+    },
+    "MQTT": {
+      "url": "tcp://127.0.0.1:1883",
+      "prefix": "/cscw-bplus-04"
+    }
+  }
+}

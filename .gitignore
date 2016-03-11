@@ -1,0 +1,9 @@
+src/github.com/patchwork-toolkit/patchwork
+src/github.com/patchwork-toolkit/patchwork/*
+static/dashboard
+static/dashboard/*
+pkg
+pkg/*
+websocket_server/out/production/websocket_component/*.class
+MessageBoxComponent/out/production/MessageBoxComponent/MessageBoxComponent.class
+MessageBoxComponent/out/production/MessageBoxComponent/MessageBoxComponentExampleUse.class

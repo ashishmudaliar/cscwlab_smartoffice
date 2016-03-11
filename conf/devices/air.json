@@ -1,0 +1,40 @@
+{
+  "name": "AirSensor",
+  "description": "air quality dummy agent",
+  "meta": {"any":"key", "kind":"dummy"},
+  "ttl": 30,
+  "resources": [
+    {
+      "type": "Resource",
+      "name": "VOC", 
+      "agent": {
+        "type": "service",
+        "dir": null,
+        "exec": "python agents/air.py"
+      },
+      "representation": {
+        "application/json": {
+          "type": "object"
+        }
+      },
+      "protocols": [
+        {
+          "type": "REST",
+          "methods": [
+            "GET"
+          ],
+          "content-types": [
+            "application/json"
+          ]
+        },
+		{
+            "type": "MQTT", 
+            "methods": [ 
+                "SUB"
+            ],
+            "content-types": ["application/json"]
+        }
+      ]
+    }
+  ]
+}
